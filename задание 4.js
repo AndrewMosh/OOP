@@ -17,18 +17,17 @@
 использование синтаксиса es6 (кроме функции-конструкторов) и так далее. */
 
 function ElectricApp(name, power) {
-  (this.name = name), //я не знаю почему prettier мне так отформатировал
-    (this.power = power),
-    (this.on = false),
-    (this.turnOn = function () {
-      on = true;
-      console.log(`The ${name} is on`);
-    });
-  this.turnOff = function () {
-    on = false;
-    console.log(`The ${name} is off`);
-  };
+  (this.name = name), (this.power = power);
 }
+//создание прототипа для методов
+ElectricApp.prototype.turnOn = function (on) {
+  on = true;
+  console.log(`The ${this.name} is on`);
+};
+ElectricApp.prototype.turnOff = function (on) {
+  on = true;
+  console.log(`The ${this.name} is off`);
+};
 //1 экземпляр
 const phone = new ElectricApp("phone", 5);
 phone.color = "red";
@@ -64,9 +63,7 @@ console.log(phone.name);
 console.log(phone.power);
 phone.turnOn();
 phone.turnOff();
-console.log(phone.on);
 console.log(laptop.name);
 console.log(laptop.power);
 laptop.turnOn();
 laptop.turnOff();
-console.log(laptop.on);
