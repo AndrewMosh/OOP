@@ -33,7 +33,7 @@ class Phone extends ElectricApp {
     console.log("call mom");
   }
 }
-//создаем новый экземпляр 1 подпрототипа
+//создаем новый экземпляр 2 подпрототипа
 const phone = new Phone("phone", 5, "red", "sumsung", "android");
 // проверям свойства
 console.log(phone.color);
