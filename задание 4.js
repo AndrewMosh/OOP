@@ -25,7 +25,7 @@ ElectricApp.prototype.turnOn = function (on) {
   console.log(`The ${this.name} is on`);
 };
 ElectricApp.prototype.turnOff = function (on) {
-  on = true;
+  on = false;
   console.log(`The ${this.name} is off`);
 };
 //1 экземпляр
