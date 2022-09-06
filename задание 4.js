@@ -17,11 +17,13 @@
 использование синтаксиса es6 (кроме функции-конструкторов) и так далее. */
 
 function ElectricApp(name, power) {
-  (this.name = name), (this.power = power), (this.on = false);
-  this.turnOn = function () {
-    on = true;
-    console.log(`The ${name} is on`);
-  };
+  (this.name = name), //я не знаю почему prettier мне так отформатировал
+    (this.power = power),
+    (this.on = false),
+    (this.turnOn = function () {
+      on = true;
+      console.log(`The ${name} is on`);
+    });
   this.turnOff = function () {
     on = false;
     console.log(`The ${name} is off`);
